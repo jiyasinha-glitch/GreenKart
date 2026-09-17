@@ -222,30 +222,44 @@ function next(step) {
 
     if (step === 2) {
 
-        if (
-            !name.value ||
-            !email.value.includes("@") ||
-            !address.value
-        ) {
+        let customerName =
+            document.getElementById("name").value.trim();
 
+        let customerEmail =
+            document.getElementById("email").value.trim();
+
+        let customerAddress =
+            document.getElementById("address").value.trim();
+
+        if (
+            customerName === "" ||
+            !customerEmail.includes("@") ||
+            customerAddress === ""
+        ) {
             msg.innerText =
                 "Please enter valid details.";
-
             return;
         }
     }
 
     if (step === 3) {
 
-        if (
-            card.value.length !== 16 ||
-            expiry.value.length !== 5 ||
-            cvv.value.length !== 3
-        ) {
+        let cardNumber =
+            document.getElementById("card").value.trim();
 
+        let expiryDate =
+            document.getElementById("expiry").value.trim();
+
+        let cvvNumber =
+            document.getElementById("cvv").value.trim();
+
+        if (
+            cardNumber.length !== 16 ||
+            expiryDate.length !== 5 ||
+            cvvNumber.length !== 3
+        ) {
             msg.innerText =
                 "Enter valid card details.";
-
             return;
         }
     }
@@ -260,7 +274,6 @@ function next(step) {
 
     msg.innerText = "";
 }
-
 
 function order() {
 

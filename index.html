@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenKart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>🌿 GreenKart</h2>
+
+        <nav>
+            <a href="#products">Plants</a> |
+            <a href="#cart">🛒 Cart (<span id="count">0</span>)</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <div>
+            <small>GROW • GREEN • HAPPY</small>
+
+            <h1>
+                Bring Nature<br>
+                <span>Home.</span>
+            </h1>
+
+            <p>Beautiful plants for beautiful spaces.</p>
+
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+
+        <div class="plant">
+            <img src="images/hero-plant.jpg" alt="Green plant">
+        </div>
+
+    </section>
+
+    <main>
+
+        <section id="products">
+
+            <h2>Our Plants 🌱</h2>
+
+            <div class="filters">
+                <button onclick="show('All')">All</button>
+                <button onclick="show('Flower')">Flowers</button>
+                <button onclick="show('Indoor')">Indoor</button>
+                <button onclick="show('Outdoor')">Outdoor</button>
+            </div>
+
+            <div id="productsBox" class="grid"></div>
+
+        </section>
+
+        <section id="cart" class="box">
+
+            <h2>🛒 Your Cart</h2>
+
+            <div id="cartBox">
+                Cart is empty 🌱
+            </div>
+
+            <hr>
+
+            <input id="promo" placeholder="Promo: SAVE20">
+            <button onclick="promoCode()">Apply</button>
+
+            <p>
+                Subtotal: ₹<span id="sub">0</span>
+            </p>
+
+            <p>
+                Discount: ₹<span id="disc">0</span>
+            </p>
+
+            <p>
+                Tax (5%): ₹<span id="tax">0</span>
+            </p>
+
+            <h3>
+                Total: ₹<span id="total">0</span>
+            </h3>
+
+            <button class="btn" onclick="checkout()">
+                Checkout
+            </button>
+
+        </section>
+
+        <section id="check" class="box hide">
+
+            <h2>Checkout 🧾</h2>
+
+            <div id="one">
+
+                <input id="name" placeholder="Name">
+                <input id="email" placeholder="Email">
+                <input id="address" placeholder="Address">
+
+                <button class="btn" onclick="next(2)">
+                    Continue
+                </button>
+
+            </div>
+
+            <div id="two" class="hide">
+
+                <input
+                    id="card"
+                    placeholder="16 digit card"
+                    maxlength="16"
+                >
+
+                <input id="expiry" placeholder="MM/YY">
+
+                <input
+                    id="cvv"
+                    placeholder="CVV"
+                    maxlength="3"
+                >
+
+                <button class="btn" onclick="next(3)">
+                    Review
+                </button>
+
+            </div>
+
+            <div id="three" class="hide">
+
+                <p>
+                    Everything looks good! 🌿
+                </p>
+
+                <button class="btn" onclick="order()">
+                    Place Order
+                </button>
+
+            </div>
+
+            <p id="msg"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        🌿 GreenKart — Your little cart of nature.
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

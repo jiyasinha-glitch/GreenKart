@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Rose",
+        "category": "Flower",
+        "price": 299,
+        "image": "images/rose.jpg",
+        "stock": 8
+    },
+    {
+        "id": 2,
+        "name": "Peace Lily",
+        "category": "Indoor",
+        "price": 399,
+        "image": "images/peace-lily.jpg",
+        "stock": 6
+    },
+    {
+        "id": 3,
+        "name": "Snake Plant",
+        "category": "Indoor",
+        "price": 499,
+        "image": "images/snake-plant.jpg",
+        "stock": 5
+    },
+    {
+        "id": 4,
+        "name": "Jasmine",
+        "category": "Flower",
+        "price": 249,
+        "image": "images/jasmine.jpg",
+        "stock": 10
+    },
+    {
+        "id": 5,
+        "name": "Areca Palm",
+        "category": "Outdoor",
+        "price": 599,
+        "image": "images/areca-palm.jpg",
+        "stock": 4
+    },
+    {
+        "id": 6,
+        "name": "Money Plant",
+        "category": "Outdoor",
+        "price": 199,
+        "image": "images/money-plant.jpg",
+        "stock": 12
+    }
+]
